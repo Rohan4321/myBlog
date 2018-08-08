@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+class linklist
+{
+    linklist* head;
+    linklist* next;
+    linklist* prev;
+    linklist* tail;
+    int data;
+public:
+    linklist()
+    {
+        head=NULL;
+        next=NULL;
+        prev=NULL;
+        tail=NULL;
+    }
+    int getData()
+    {
+        int d;
+        cin>>d;
+        return d;
+    }
+    linklist* createNode(linklist* curNode)
+    {
+        linklist* newNode=new linklist;
+        newNode->next=NULL;
+        newNode->prev=curNode;
+        newNode->data=getData();
+        return newNode;
+    }
+    void createList(int numberOfData)
+    {
+        linklist* head=createNode(NULL);
+        linklist* node=head;
+        for (int j=1; j<numberOfData; j++)
+        {
+            node->next=createNode(node);
+            node=node->next;
+            tail=node;
+        }
+    }
+
+    void print()
+    {
+        linklist* node=head;
+        while(node!=NULL(
+        {
+            cout<<node->data<<" ";
+            node=node->next;
+        }
+    node=tail;
+    cout<<"Reverese order:" <<endl;
+    while (node!=NULL)
+    {
+        cout<<node->data<<" ";
+        node=node->prev;
+    }
+};
+
+int main()
+{
+    linklist obj;
+    obj.createList(5);
+    obj.print();
+    return 0;
+}

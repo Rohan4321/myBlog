@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" type="text/css" href="Rohan'sBlog.css">
+    </head>
+    <body>
+        <div>
+        <header></header>
+        <article>
+            <section>
+                <h2>Doubly Linked List</h2>
+                <p>
+                    আপনি যদি সিঙ্গলি লিংকড লিস্ট বুঝে থাকেন তবে আশা করি ডাবলি লিংকড লিস্ট সহজে বুঝে ফেলবেন। 
+                    সিঙ্গলি লিংকড লিস্টের ক্ষেত্রে নোডে শুধুমাত্র ডাটা আর তার পরবর্তী নোডের এড্রেস থাকে। কিন্তু ডাবলি লিংকড লিস্ট এর ক্ষেত্রে প্রত্যেকটা নোডে ঠিক তার আগের ও পরের এড্রেস থাকে।
+                    আগের এড্রেসটি নোডের prev অংশে রাখা হবে। 
+                    ডাবলি লিংকড লিস্টের নোড বানানোর ফাংশনটা হল:-
+                    <br>
+                    createNode(linklist* curNode) <br>
+                    { <br>
+                    linklist* newNode=new node;  <br>
+                    newNode&minus;&gt;next=NULL;  <br>
+                    newNode&minus;&gt;prev=curNode;  <br>
+                    newNode&minus;&gt;data=getData();  <br>
+                    return newNode;  <br>
+                    }  <br>
+
+                    সিঙ্গলি লিংকডলিস্ট এর createNode() ফাংশনে কোনো প্যারামিটার ছিল না। কিন্তু ডাবলি লিংকড লিস্ট এর ফাংশনে প্যারামিটারের ডাটা হিসেবে linklist* curNode রয়েছে। এটি node এর prev অংশে এসাইন করা হবে। 
+                    ডাবলি লিংকড লিস্টের লিস্ট বানানোর কোডটা হল :-  <br>
+                    createList(int numberOfData)  <br>
+                    {  <br>
+                    head=createNode(NULL);  <br>
+                    linklist* node=head;  <br>
+                    for (int j=1; j&lt;numberOfData; j++)  <br>
+                    {  <br>
+                    node&minus;&gt;next=createNode(node);  <br>
+                    node=node&minus;&gt;next;  <br>
+                    tail=node;  <br>
+                    }  <br>
+                    }  <br>
+
+                    head নোডটি বানানোর সময় createNode() এর প্যারামিটার হিসেবে NULL রাখা হয়েছে। কারণ হেড নোড এর prev অংশ NULL হয়।   <br>
+                    node->next=createNode(node);  <br>
+                    এই লাইনে node এর next অংশে নতুন নোড এসাইন করা হয়েছে এবং createNode ফাংশনের প্যারামিটার হিসেবে ওই নোডটাকে রাখা হয়েছে। তার মানে এই নোডটি ওই নোডের পরবর্তী নোডের আগের নোড। 
+                    আর tail নোড হল সবার শেষের নোড। লিস্ট বানানো শেষ হয়ে গেলে সবার শেষের নোডটি tail এ এসাইনড হবে।
+                    ডাবলি লিংকড লিস্ট বানানোর কোডটা হল:-
+                    
+                </p>
+                <embed height="1150px" width="500px"  src="DoublyLinkedList.txt">
+                <p>
+                    ব্যাস! হয়ে গেল ৫ নোডবিশিষ্ট একটি ডাবলি লিংকড লিস্ট।
+                    ডাবলি লিংকড লিস্টের সুবিধা হল tail নোড ধরে রিভার্স অর্ডারেও ডাটা প্রিন্ট করা যায়।
+                    আশা করি বুঝতে পেরেছেন। কোথাও বুঝতে সমস্যা হলে কমেন্ট করতে পারেন। <br>
+
+                    ধন্যবাদ ।
+                </p>
+            </section>
+        </article>
+        </div>
+    </body>
+</html>
