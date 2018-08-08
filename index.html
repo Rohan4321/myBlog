@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
+    </head>
+    <body>
+        <header>
+        <h1>Rohan's Blog</h1>
+        </header>
+        <article>
+            <section>
+                <h2>Generating Random Number</h2>
+                <p>
+                    Random numbers are numbers of a particular set or interval but these are unpredictable.
+Random number generation can be compared with Ludu Dice throwing. Before throwing the dice you can't predict what number will be displayed on the dice. Let's take a look how random number can be generated in a program. To generate random number rand() function is used. A code is given below for better understanding.
+<br>
+#include &ltiostream&gt  <br>
+#include <cstdlib>    <br>
+using namespace std;  <br>
+int main()   <br>
+{  <br>
+int randomNumber1 = rand();  <br>
+int randomNumber2 = rand() % 2;  <br>
+int randomNumber3 = rand() % 6+5;  <br>
+cout &lt&lt randomNumber1 &lt&lt endl;  <br>
+cout &lt&lt randomNumber2 &lt&lt endl; <br>
+cout &lt&lt randomNumber3 &lt&lt endl;  <br>
 
+return 0;  <br>
+}  <br>
+<br>
+                    
+****How rand() function works:****
+<br>
 
-</head>
-<body>
-<h1>
-Hello, I am Rohan
-</h1>
-</body>
+In this code,randomNumber1, randomNumber2, randomNumber3 are three integer variables which generate three random number of three different ranges. randomNumber1 will generate any integer number. What about randomNumber2? . The number which will be written after the modulus operator(%) will indicate the range. We know integer numbers start from 0. rand()%2 means, it will generate a random number which is less than 2. That means that will generate 0 or 1. You may have question , how to create a random number within more specific range? You will find your answer by understanding the generating process of randomNumber3. Suppose, you want to generate a random number of range 5 to 10. The number should be equal to five or greater than five but less than or equal to ten. The mechanism is at first if you can find out the random number number of range 0 to 5, then if you add 5 with it then you will be able to generate a random number of range 5 to 10 by your program. According to this, in this program "rand()%6" has been written to generate a random number of range 0 to 5 .Then 5 has been added with this random number to find out the random number of range 5 to 10.
+If you have any question regarding random number, you can make a question on the comment box.
+Thank you :)
+                </p>
+            </section>
+        </article>
+    </body>
 </html>
