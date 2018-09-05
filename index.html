@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <link href="Style.css" rel="stylesheet">
+        <title>Rohan's Blog</title>
         
     </head>
     <body>
@@ -13,37 +15,90 @@
                 <h2>Generating Random Number</h2>
                 <p>
                     Random numbers are numbers of a particular set or interval but these are unpredictable.
-Random number generation can be compared with Ludu Dice throwing. Before throwing the dice you can't predict what number will be displayed on the dice. Let's take a look how random number can be generated in a program. To generate random number rand() function is used. A code is given below for better understanding.
-<br>
-#include &ltiostream&gt  <br>
-#include <cstdlib>    <br>
-using namespace std;  <br>
-int main()   <br>
-{  <br>
-int randomNumber1 = rand();  <br>
-int randomNumber2 = rand() % 2;  <br>
-int randomNumber3 = rand() % 6+5;  <br>
-cout &lt&lt randomNumber1 &lt&lt endl;  <br>
-cout &lt&lt randomNumber2 &lt&lt endl; <br>
-cout &lt&lt randomNumber3 &lt&lt endl;  <br>
+                    Random number generation can be compared with Ludu Dice throwing. Before throwing the dice you can't predict what number will be displayed on the dice. Let's take a look how random number can be generated in a program. To generate random number rand() function is used. A code is given below for better understanding.
+                    <br>
+                    #include &ltiostream&gt  <br>
+                    #include &ltcstdlib&gt   <br>
+                    using namespace std;  <br>
+                    int main()   <br>
+                    {  <br>
+                    int randomNumber1 = rand();  <br>
+                    int randomNumber2 = rand() % 2;  <br>
+                    int randomNumber3 = rand() % 6+5;  <br>
+                    cout &lt&lt randomNumber1 &lt&lt endl;  <br>
+                    cout &lt&lt randomNumber2 &lt&lt endl; <br>
+                    cout &lt&lt randomNumber3 &lt&lt endl;  <br>
 
-return 0;  <br>
-}  <br>
-<br>
-<img src="26112087_860889977413283_713361283734443646_n.jpg">
+                    return 0;  <br>
+                    }  <br>
+                    <br>
+                    <img src="26112087_860889977413283_713361283734443646_n.jpg">
                     
-<h3>How rand() function works:</h3>
-<br>
+                    <h3>How rand() function works:</h3>
+                    <br>
 
-In this code,randomNumber1, randomNumber2, randomNumber3 are three integer variables which generate three random number of three different ranges. randomNumber1 will generate any integer number. What about randomNumber2? . The number which will be written after the modulus operator(%) will indicate the range. We know integer numbers start from 0. rand()%2 means, it will generate a random number which is less than 2. That means that will generate 0 or 1. You may have question , how to create a random number within more specific range? You will find your answer by understanding the generating process of randomNumber3. Suppose, you want to generate a random number of range 5 to 10. The number should be equal to five or greater than five but less than or equal to ten. The mechanism is at first if you can find out the random number number of range 0 to 5, then if you add 5 with it then you will be able to generate a random number of range 5 to 10 by your program. According to this, in this program "rand()%6" has been written to generate a random number of range 0 to 5 .Then 5 has been added with this random number to find out the random number of range 5 to 10.
-If you have any question regarding random number, you can make a question on the comment box.
-Thank you :)
+                    In this code,randomNumber1, randomNumber2, randomNumber3 are three integer variables which generate three random number of three different ranges. randomNumber1 will generate any integer number. What about randomNumber2? . The number which will be written after the modulus operator(%) will indicate the range. We know integer numbers start from 0. rand()%2 means, it will generate a random number which is less than 2. That means that will generate 0 or 1. You may have question , how to create a random number within more specific range? You will find your answer by understanding the generating process of randomNumber3. Suppose, you want to generate a random number of range 5 to 10. The number should be equal to five or greater than five but less than or equal to ten. The mechanism is at first if you can find out the random number number of range 0 to 5, then if you add 5 with it then you will be able to generate a random number of range 5 to 10 by your program. According to this, in this program "rand()%6" has been written to generate a random number of range 0 to 5 .Then 5 has been added with this random number to find out the random number of range 5 to 10.
+                    If you have any question regarding random number, you can make a question on the comment box.
+                    Thank you :)
                 </p>
             </section>
         </article>
-        
-        <article>
-            <h2></h2>
+        <article id="linearSearch">
+            <h2>Linear Search</h2>
+            <p>
+                মনে করুন, আপনার কাছে কিছু চিরকুট আছে যেগুলো সরলরৈখিকভাবে সাজানো। প্রত্যেকটি চিরকুটে একটা করে সংখ্যা লিখা। আপনাকে বলা হল যেকোনো একটি সংখ্যা খুজে বের করার জন্য। আপনি একটা একটা করে খুজা শুরু করলেন। যদি পেয়ে যান, তাহলে আপনাকে বলতে হবে চিরকুটটা লাইনের কত নম্বরে ছিল। আর না পেলে বলবেন নেই। ব্যাপারটা Linear Search এর মত।
+                মনে করেন, কোনো একটি অ্যারেতে অনেকগুলো ডাটা রয়েছে। অ্যারেতে ডাটা সরলরৈখিকভাবে থাকে। অ্যারের নির্দিষ্ট একটি ডাটা খুজে বের করার জন্য বিভিন্ন প্রকার সার্চিং প্রসেস এর মধ্যে একটি হল Linear Search.
+                উদাহরণস্বরূপ, একটি অ্যারে নেওয়া যাক।
+                arr[10]={34,55,77,98,30,37,12,15,78,3};
+                এখন যদি বলা হয় 98 ডাটাটি খুজে বের করে এর ইনডেক্স বের করার জন্য তাহলে অ্যারের প্রথম ইনডেক্স থেকে সার্চিং শুরু হবে। একটা একটা করে চেক করে 98 ডাটা পেয়ে তার ইনডেক্স প্রিন্ট করে দিলেই কাজ শেষ। আর এরকম কোনো ডাটা যদি সার্চ করার জন্য বলা হয় যেটি কিনা অ্যারেতে নেই তবে ইনডেক্স হিসেবে -1 আসবে। কারণ -1 কোনো অ্যারের ইনডেক্স হতে পারে না। 
+                এবার তাহলে কোড করা যাক:-
+
+                #include &ltiostream&gt <br>
+                using namespace std; <br>
+                int linearSearch(int data, int arr[], int sizeOfArray ) <br>
+                { <br>
+                for (int i = 0; i &ltsizeOfArray ; i++) <br>
+                { <br>
+                    if (arr[i] == data) <br>
+                    { <br>
+                        return i; <br>
+                    } <br>
+                } <br>
+                return -1; <br>
+                } <br>
+                int main() <br>
+                { <br>
+
+                    int arr[10] = { 34,55,77,98,30,37,12,15,78,3 }; <br>
+                    int sizeOfArray = 10; <br>
+                    int data; <br>
+                    cout &lt&lt "Enter the data which you want to search: "; <br>
+                    cin &gt&gt data; <br>
+                    int index; <br>
+                    index=linearSearch(data, arr, sizeOfArray); <br>
+                    if (index == -1) <br>
+                    {
+                        cout &lt&lt "Ooops! Inputted data has not been found." &lt&lt endl; <br>
+                    } <br>
+                    else <br>
+                    {
+                        cout &lt&lt "Inputted data has been found at " &lt&lt index &lt&lt " no index" &lt&lt endl; <br>
+                    } <br>
+                    return 0; <br>
+
+                    } <br>
+
+                এই কোডে Linear searching- এর কাজটি করছে linearSearch(int data, int arr[], int sizeOfArray) ফাংশনটি যার প্যারামিটার হিসেবে আছে int data (যে ডাটাটি আপনি সার্চ করছেন), int arr[]( অ্যারের এড্রেস), int sizeOfArray (অ্যারের সাইজ)।
+
+                এই ফাংশনে একটি for লুপ ব্যবহার করে একটা একটা করে ডাটা এমনভাবে চেক করা হয়েছে যেন অ্যারের কোনো উপাদানের সাথে আপনার ইনপুট করা ডাটা মিলে গেলেই ওই ইনডেক্স ফাংশনে রিটার্ণ হবে। আর না মিললে for লুপ থেকে বেরিয়ে এসে -1 রিটার্ণ করে দিবে। 
+                পরে মেইন ফাংশনে রিটার্ণ ভ্যালু index ভ্যারিয়েবলে স্টোর হবে। তারপর চেক করা হবে এর ভ্যালু -1 কিনা? যদি -1 হয় তার মানে অ্যারেটিতে ইনপুট করা ডাটাটি নেই। আর যদি -1 না হয় তার মানে অ্যারেতে ডাটাটি রয়েছে। তারপর ওই ডাটা ইনডেক্স প্রিন্ট করা যাবে।
+                আশা করি বুঝতে পেরেছেন। কোথাও বুঝতে সমস্যা হলে কমেন্ট করতে পারেন।
+
+                ধন্যবাদ 
+            </p>
         </article>
+            
+        
+    
     </body>
 </html>
