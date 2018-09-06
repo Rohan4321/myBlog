@@ -1,0 +1,52 @@
+body
+{
+    margin: 2em;
+}
+#mainHeader
+{
+    color:green;
+    text-align: center;
+    font-family: sans-serif;
+}
+.randomNumberHeader
+{
+  color: black;  
+  font-family: cursive;
+}
+#randomNumber
+{
+    font-family: sans-serif;
+    
+}
+#randomNumberCode
+{
+    font-family:monospace ;
+    font-size: 15px;
+    background-color: wheat;
+    height: 250px;
+    width: 300px;
+    
+}
+#randomNumberImage
+{
+    height: 400px;
+    width: 700px;
+}
+#linearSearchCode
+{
+    font-family:monospace ;
+    font-size: 15px;
+    background-color: wheat;
+    height: 700px;
+    width: 700px;
+    
+}
+#fractionalKnapsackCode
+{
+    font-family:monospace ;
+    font-size: 15px;
+    background-color: wheat;
+    height: 1090px;
+    width: 500px;
+    
+}
